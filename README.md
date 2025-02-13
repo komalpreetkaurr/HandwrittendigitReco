@@ -1,24 +1,97 @@
-# Handwritten Digit Recognition using Convolutional Neural Networks (CNN)
-This project demonstrates Handwritten-Digit(0-9)-Recognition using (CNN) Convolutional Neural Networks.
-## Dataset
-The project uses the famous MNIST dataset, which consists of 60,000 labeled images of handwritten digits for training and 10,000 labeled images for testing. Each image is 28x28 pixels in size and grayscale, with pixel values ranging from 0 to 255. The dataset is preprocessed to normalize pixel values.
-## Model Architecture
-* The first layer is a convolutional layer (Conv2D) with 32 filters, a kernel size of (3, 3), and a ReLU activation function. It takes an input image of shape (28, 28, 1) where 1 represents grayscale channel.
-* The output from the convolutional layer is then passed through a max pooling layer (MaxPooling2D) with a pool size of (2, 2), which helps reduce spatial dimensions while preserving important features.
-* Another convolutional layer with 64 filters, a kernel size of (3, 3), and a ReLU activation function is added, followed by another max pooling layer with a pool size of (2, 2).
-* The output from the last max pooling layer is then flattened into a 1D array using a Flatten layer, which prepares the data for the fully connected layers.
-* Two fully connected layers (Dense) are added on top of the flattened output. The first dense layer has 128 units with a ReLU activation function, while the second dense layer has 10 units with a softmax activation function, which gives the probability of each class (0 to 9) being the correct digit.
+Handwritten Digit Recognition (MNIST)
 
-## Model Evaluation
-![1](https://user-images.githubusercontent.com/97530517/232014919-390ab15f-67e6-4a63-bef3-9005d795135f.PNG)
+This project implements a Handwritten Digit Recognition system using the MNIST dataset. The model is built using TensorFlow/Keras and utilizes a Convolutional Neural Network (CNN) for accurate classification of digits (0-9).
 
-## Model Deployment
-### Streamlit Front-end
-The Streamlit front-end provides a simple and interactive web-based user interface for users to draw digit and get predictions from the trained CNN model.
+📌 Features
 
-1. Draw a digit on a canvas: Users can use the mouse or touchpad to draw a digit on a canvas provided by the Streamlit app. The drawn image is then passed to the trained CNN model for prediction.
-2. Display prediction results: The Streamlit app displays the predicted digit.
-3. [Link to Streamlit Application](https://vinay2022-hand-written-digit-recognition.streamlit.app/)
-## Sample Output
-![full](https://user-images.githubusercontent.com/97530517/232018256-94749378-9d7b-4b33-a0a9-376bd2862392.PNG)
-![image (1)](https://user-images.githubusercontent.com/97530517/232014753-7cd8a16c-1b42-4a5c-b67b-27998331ef8e.png)
+Uses MNIST dataset for training and testing.
+
+CNN-based model for high accuracy.
+
+Preprocessing of images (normalization & reshaping).
+
+Model training & evaluation included.
+
+Can be extended for real-world digit recognition tasks.
+
+🛠️ Installation
+
+Ensure you have Python 3.7+ and the following dependencies installed:
+
+pip install tensorflow numpy matplotlib
+
+
+🚀 Usage
+
+1️⃣ Train the Model
+
+Run the following command to train the model:
+
+python src/train.py
+
+2️⃣ Test the Model
+
+Evaluate the model's accuracy:
+
+python src/test.py
+
+3️⃣ Predict on New Images
+
+Use the trained model to recognize handwritten digits:
+
+python src/predict.py --image path/to/image.png
+
+📊 Model Architecture
+
+The CNN model consists of:
+
+2 Convolutional Layers (ReLU activation, MaxPooling)
+
+Flatten Layer
+
+Dense Layers for classification
+
+model = tf.keras.Sequential([
+    Conv2D(32, (3,3), activation='relu', input_shape=(28,28,1)),
+    MaxPooling2D((2,2)),
+    Conv2D(64, (3,3), activation='relu'),
+    MaxPooling2D((2,2)),
+    Flatten(),
+    Dense(128, activation='relu'),
+    Dense(10, activation='softmax')
+])
+
+📌 Dataset
+
+We use the MNIST dataset, which contains 60,000 training and 10,000 testing images of handwritten digits. The dataset is available through Keras:
+
+from tensorflow.keras.datasets import mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+📈 Training & Performance
+
+After 10-15 epochs, the model achieves ~98% accuracy on the test set.
+
+Metric
+
+Value
+
+Training Accuracy
+
+~99%
+
+Test Accuracy
+
+~98%
+
+📜 License
+
+This project is licensed under the MIT License.
+
+⭐ Contributing
+
+This project was developed collaboratively. Special thanks to [Vinay10100] for their contributions. Feel free to contribute by improving the model, adding more datasets, or enhancing the documentation. Fork and submit a pull request!
+
+📞 Contact
+
+For any queries, contact [Komalpreetkaur] at [kpreetk.879@gmail.com].
