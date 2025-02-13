@@ -21,27 +21,7 @@ Ensure you have Python 3.7+ and the following dependencies installed:
 pip install tensorflow numpy matplotlib
 ```
 
-🚀 Usage
-
-1️⃣ Train the Model
-
-Run the following command to train the model:
-
-python src/train.py
-
-2️⃣ Test the Model
-
-Evaluate the model's accuracy:
-
-python src/test.py
-
-3️⃣ Predict on New Images
-
-Use the trained model to recognize handwritten digits:
-
-python src/predict.py --image path/to/image.png
-
-📊 Model Architecture
+📊 ***Model Architecture***
 
 The CNN model consists of:
 
@@ -61,7 +41,7 @@ model = tf.keras.Sequential([
     Dense(10, activation='softmax')
 ])
 
-📌 Dataset
+📌 ***Dataset***
 
 We use the MNIST dataset, which contains 60,000 training and 10,000 testing images of handwritten digits. The dataset is available through Keras:
 
@@ -72,26 +52,17 @@ from tensorflow.keras.datasets import mnist
 
 After 10-15 epochs, the model achieves ~98% accuracy on the test set.
 
-Metric
-
-Value
-
 Training Accuracy
-
+```
 ~99%
-
+```
 Test Accuracy
-
+```
 ~98%
+```
+⭐ ***Contributing***
+This project was developed through collaborative efforts. Special thanks to [**Vinay10100**] for their meticulous code contributions. You’re welcome to contribute by refining the model, expanding datasets, or enhancing the documentation. Fork the repository and submit a pull request!
 
-📜 License
+📞 **Contact**
 
-This project is licensed under the MIT License.
-
-⭐ Contributing
-
-This project was developed collaboratively. Special thanks to [Collaborator's Name] for their contributions. Feel free to contribute by improving the model, adding more datasets, or enhancing the documentation. Fork and submit a pull request!
-
-📞 Contact
-
-For any queries, contact [Your Name] at [your.email@example.com].
+For any queries, contact [KomalpreetKaur] at [kpreetk.879@gmail.com].
