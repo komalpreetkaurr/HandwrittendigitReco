@@ -1,8 +1,8 @@
-Handwritten Digit Recognition (MNIST)
+***Handwritten Digit Recognition (MNIST)***
 
 This project implements a Handwritten Digit Recognition system using the MNIST dataset. The model is built using TensorFlow/Keras and utilizes a Convolutional Neural Network (CNN) for accurate classification of digits (0-9).
 
-📌 Features
+📌 ***Features***
 
 Uses MNIST dataset for training and testing.
 
@@ -14,23 +14,12 @@ Model training & evaluation included.
 
 Can be extended for real-world digit recognition tasks.
 
-🛠️ Installation
+🛠️ ***Installation***
 
 Ensure you have Python 3.7+ and the following dependencies installed:
-
+```
 pip install tensorflow numpy matplotlib
-
-📂 Project Structure
-
-├── dataset/             # (Optional) Store custom dataset if needed
-├── models/              # (Optional) Save trained models here
-├── notebooks/           # Jupyter Notebook files
-├── src/
-│   ├── train.py        # Model training script
-│   ├── test.py         # Testing script
-│   ├── predict.py      # Inference on new images
-│   ├── utils.py        # Helper functions
-├── README.md           # Project documentation
+```
 
 🚀 Usage
 
@@ -106,6 +95,3 @@ This project was developed collaboratively. Special thanks to [Collaborator's Na
 📞 Contact
 
 For any queries, contact [Your Name] at [your.email@example.com].
-
-Happy Coding! 🚀
-
