@@ -20,6 +20,17 @@ Ensure you have Python 3.7+ and the following dependencies installed:
 
 pip install tensorflow numpy matplotlib
 
+📂 Project Structure
+
+├── dataset/             # (Optional) Store custom dataset if needed
+├── models/              # (Optional) Save trained models here
+├── notebooks/           # Jupyter Notebook files
+├── src/
+│   ├── train.py        # Model training script
+│   ├── test.py         # Testing script
+│   ├── predict.py      # Inference on new images
+│   ├── utils.py        # Helper functions
+├── README.md           # Project documentation
 
 🚀 Usage
 
@@ -90,8 +101,11 @@ This project is licensed under the MIT License.
 
 ⭐ Contributing
 
-This project was developed collaboratively. Special thanks to [Vinay10100] for their contributions. Feel free to contribute by improving the model, adding more datasets, or enhancing the documentation. Fork and submit a pull request!
+This project was developed collaboratively. Special thanks to [Collaborator's Name] for their contributions. Feel free to contribute by improving the model, adding more datasets, or enhancing the documentation. Fork and submit a pull request!
 
 📞 Contact
 
-For any queries, contact [Komalpreetkaur] at [kpreetk.879@gmail.com].
+For any queries, contact [Your Name] at [your.email@example.com].
+
+Happy Coding! 🚀
+
